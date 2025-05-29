@@ -125,8 +125,12 @@ To add new sections:
 2. Upload the `out` folder to Netlify
 3. Configure for single-page application
 
+### GitHub Pages
+1. Build the project: `npm run build`
+2. Enable GitHub Pages in repository settings
+3. Deploy the `out` folder contents
+
 ### Other Platforms
-- **GitHub Pages**: Use `next export` for static export
 - **AWS S3**: Deploy the built static files
 - **Docker**: Use the included Dockerfile for containerization
 
@@ -177,4 +181,3 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 Built with ❤️ using Next.js, TypeScript, and Tailwind CSS.
- 
