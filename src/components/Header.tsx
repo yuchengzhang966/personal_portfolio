@@ -14,7 +14,7 @@ export default function Header() {
     >
       <nav className="max-w-6xl mx-auto px-8 py-4 flex justify-between items-center">
         <div className="text-black text-xl font-semibold tracking-tight">
-          pearl
+          Jenny(Yucheng) Zhang
         </div>
         
         <ul className="hidden md:flex space-x-8">
