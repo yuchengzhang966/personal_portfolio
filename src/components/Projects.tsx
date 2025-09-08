@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import Link from 'next/link'
 
 // Project data - Add new projects here!
@@ -60,158 +61,42 @@ const projects = [
   */
 ]
 
-export default function Projects() {
-  // Custom SVG component for the logo
-  const LogoSVG = () => (
-    <svg width="200" height="120" viewBox="0 0 200 120" fill="none" className="mx-auto mb-4" role="img" aria-labelledby="logoTitle">
-      <title id="logoTitle">Brand Identity Logo</title>
-      <path 
-        d="M20 60C20 32 32 20 60 20C88 20 100 32 100 60C100 88 88 100 60 100C32 100 20 88 20 60Z" 
-        stroke="#4F46E5" 
-        strokeWidth="3" 
-        fill="none"
-      />
-      <path 
-        d="M100 60C100 32 112 20 140 20C168 20 180 32 180 60C180 88 168 100 140 100C112 100 100 88 100 60Z" 
-        stroke="#7C3AED" 
-        strokeWidth="3" 
-        fill="none"
-      />
-      <path 
-        d="M60 20C60 48 72 60 100 60C128 60 140 48 140 20" 
-        stroke="#06B6D4" 
-        strokeWidth="3" 
-        fill="none"
-      />
-      <path 
-        d="M60 100C60 72 72 60 100 60C128 60 140 72 140 100" 
-        stroke="#06B6D4" 
-        strokeWidth="3" 
-        fill="none"
-      />
-    </svg>
-  )
+type Project = typeof projects[0];
 
-  // Dashboard component for the analytics project
-/*   const DashboardPreview = () => (
-    <div className="max-w-sm mx-auto">
-      <div className="flex justify-between items-center mb-6">
-        <h3 className="text-xl font-semibold text-gray-900">Summary</h3>
-        <span className="text-sm text-gray-500">February 2024</span>
-      </div>
-      
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-        <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-2xl p-6 shadow-lg">
-          <div className="text-2xl mb-2">📊</div>
-          <div className="text-2xl font-bold mb-1">120</div>
-          <div className="text-sm opacity-90 mb-1">Upcoming Appt.</div>
-          <div className="text-xs opacity-75">4 not confirmed</div>
-        </div>
-        
-        <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
-          <div className="text-2xl mb-2">✓</div>
-          <div className="text-2xl font-bold text-gray-900 mb-1">72</div>
-          <div className="text-sm text-gray-600 mb-1">Finished Appt.</div>
-          <div className="text-xs text-green-500 font-semibold">↑ 3.4%</div>
-        </div>
-      </div>
-      
-      <div className="bg-white rounded-2xl p-6 shadow-lg">
-        <div className="text-2xl font-bold text-gray-900 mb-4">$ 1,023.70</div>
-        <div className="h-16 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 rounded-lg relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-pulse"></div>
-        </div>
-      </div>
-    </div>
-  )
- */
-  // COVID-19 Map visualization component
-  const CovidMapPreview = () => (
-    <div className="max-w-sm mx-auto p-4">
-      {/* Header with stats */}
-      <div className="text-center mb-6">
-        <h3 className="text-lg font-semibold text-white mb-3">Global COVID-19 Data</h3>
-        <div className="grid grid-cols-2 gap-4 mb-4">
-          <div className="bg-white/10 rounded-lg p-3 backdrop-blur-sm">
-            <div className="text-xs text-blue-100 mb-1">Total Cases</div>
-            <div className="text-sm font-bold text-white">10.05B</div>
-          </div>
-          <div className="bg-white/10 rounded-lg p-3 backdrop-blur-sm">
-            <div className="text-xs text-blue-100 mb-1">Total Deaths</div>
-            <div className="text-sm font-bold text-white">89.7M</div>
-          </div>
-        </div>
-      </div>
+// Helper components defined outside the main component to prevent re-declaration on each render.
 
-      {/* World map using uploaded image */}
-      <div className="relative bg-white/5 rounded-xl p-4 backdrop-blur-sm">
-        {/* Map image container */}
-        <div className="relative w-full h-32 rounded-lg overflow-hidden">
-          <img 
-            src="/images/map.png" 
-            alt="World COVID-19 Data Map"
-            className="w-full h-full object-cover opacity-80"
-          />
-          
-          {/* Interactive hover overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent hover:via-blue-500/10 transition-all duration-300"></div>
-        </div>
-        
-        {/* Color scale reference */}
-        <div className="flex justify-center mt-3 mb-2">
-          <div className="flex items-center bg-white/10 rounded-full px-3 py-1">
-            <div className="flex items-center gap-1 mr-3">
-              <div className="w-3 h-2 bg-gradient-to-r from-blue-200 to-blue-900 rounded"></div>
-              <span className="text-xs text-white/80">Intensity</span>
-            </div>
-          </div>
-        </div>
-        
-        {/* Legend */}
-        <div className="flex justify-center gap-4 text-xs">
-          <div className="flex items-center gap-1">
-            <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-            <span className="text-white/80">High</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-            <span className="text-white/80">Medium</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <div className="w-2 h-2 bg-white/40 rounded-full"></div>
-            <span className="text-white/80">Low</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+// Custom SVG component for the logo
+const LogoSVG = () => (
+  <svg width="200" height="120" viewBox="0 0 200 120" fill="none" className="mx-auto mb-4" role="img" aria-labelledby="logoTitle">
+    <title id="logoTitle">Brand Identity Logo</title>
+    <path 
+      d="M20 60C20 32 32 20 60 20C88 20 100 32 100 60C100 88 88 100 60 100C32 100 20 88 20 60Z" 
+      stroke="#4F46E5" 
+      strokeWidth="3" 
+      fill="none"
+    />
+    <path 
+      d="M100 60C100 32 112 20 140 20C168 20 180 32 180 60C180 88 168 100 140 100C112 100 100 88 100 60Z" 
+      stroke="#7C3AED" 
+      strokeWidth="3" 
+      fill="none"
+    />
+    <path 
+      d="M60 20C60 48 72 60 100 60C128 60 140 48 140 20" 
+      stroke="#06B6D4" 
+      strokeWidth="3" 
+      fill="none"
+    />
+    <path 
+      d="M60 100C60 72 72 60 100 60C128 60 140 72 140 100" 
+      stroke="#06B6D4" 
+      strokeWidth="3" 
+      fill="none"
+    />
+  </svg>
+);
 
-  const renderProjectContent = (project: typeof projects[0]) => {
-    // Special cases for complex projects
-    /* if (project.title === "COVID-19 Dashboard") {
-      return (
-        <div className="p-8">
-          <CovidMapPreview />
-          <div className="mt-4 text-center">
-            <h3 className="text-lg font-semibold text-white mb-1">{project.title}</h3>
-            <p className="text-sm text-blue-100">{project.description}</p>
-          </div>
-        </div>
-      )
-    } */
-
-/*     if (project.type === "dashboard") {
-      return (
-        <div className="p-8">
-          <DashboardPreview />
-          <div className="mt-4 text-center">
-            <h3 className="text-lg font-semibold text-gray-900 mb-1">{project.title}</h3>
-            <p className="text-sm text-gray-600">{project.description}</p>
-          </div>
-        </div>
-      )
-    } */
-
+const renderProjectContent = (project: Project) => {
     if (project.icon === "logo") {
       return (
         <div className="text-center p-6">
@@ -219,8 +104,8 @@ export default function Projects() {
           <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
           <p className="text-gray-300 text-sm mb-4">{project.description}</p>
           <div className="flex gap-2 justify-center flex-wrap">
-            {project.tags.map((tag, index) => (
-              <span key={index} className="bg-white/20 text-white px-3 py-1 rounded-full text-xs">
+            {project.tags.map((tag) => (
+              <span key={tag} className="bg-white/20 text-white px-3 py-1 rounded-full text-xs">
                 {tag}
               </span>
             ))}
@@ -236,16 +121,17 @@ export default function Projects() {
         <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
         <p className="text-gray-200 text-sm mb-4">{project.description}</p>
         <div className="flex gap-2 justify-center flex-wrap">
-          {project.tags.map((tag, index) => (
-            <span key={index} className="bg-white/20 text-white px-3 py-1 rounded-full text-xs">
+          {project.tags.map((tag) => (
+            <span key={tag} className="bg-white/20 text-white px-3 py-1 rounded-full text-xs">
               {tag}
             </span>
           ))}
         </div>
       </div>
     )
-  }
+  };
 
+export default function Projects() {
   return (
     <section id="work" className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-8">
@@ -262,16 +148,17 @@ export default function Projects() {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {projects.map((project) => {
+            const isInteractive = project.link && project.link !== "#";
             const ProjectCard = (
               <div
-                className={`group bg-gradient-to-br ${project.gradient} rounded-3xl min-h-[400px] flex items-center justify-center transform hover:-translate-y-2 hover:scale-105 transition-all duration-300 overflow-hidden cursor-pointer`}
+                className={`group bg-gradient-to-br ${project.gradient} rounded-3xl min-h-[400px] flex items-center justify-center transform transition-all duration-300 overflow-hidden ${isInteractive ? 'hover:-translate-y-2 hover:scale-105 cursor-pointer' : ''}`}
               >
                 {renderProjectContent(project)}
               </div>
             )
 
             // If project has a link, wrap in appropriate component
-            if (project.link && project.link !== "#") {
+            if (isInteractive) {
               // Check if it's an external link (starts with http)
               if (project.link.startsWith('http')) {
                 return (
