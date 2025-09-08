@@ -1,18 +1,38 @@
 'use client'
 
+import { useState, useEffect } from 'react';
+import Button from './Button';
+
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Add the glass effect when scrolled more than 10px
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    // Add event listener on component mount
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); // Empty dependency array ensures this effect runs only once
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
     }
   }
-
+  
   return (
     <header 
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+      className={`fixed inset-x-0 top-0 md:top-6 md:max-w-5xl md:mx-auto md:rounded-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-lg shadow-md' : 'bg-transparent'}`}
     >
-      <nav className="max-w-6xl mx-auto px-8 py-4 flex justify-between items-center">
+      <nav className="w-full px-8 py-3 flex justify-between items-center">
         <div className="text-black text-xl font-semibold tracking-tight">
           Jenny(Yucheng) Zhang
         </div>
@@ -44,9 +64,7 @@ export default function Header() {
           </li>
         </ul>
 
-        <button className="hidden md:block bg-black text-white px-6 py-2 rounded-full font-semibold hover:bg-gray-800 transform hover:-translate-y-0.5 transition-all duration-300">
-          Remix
-        </button>
+        <Button />
 
         {/* Mobile menu button */}
         <button className="md:hidden text-black">

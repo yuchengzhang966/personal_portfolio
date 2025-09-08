@@ -6,14 +6,15 @@ import Link from 'next/link'
 const projects = [
   {
     id: 1,
-    title: "Brand Identity",
-    description: "Logo design and branding",
-    type: "design",
-    gradient: "from-slate-800 to-slate-600",
-    icon: "logo", // Special case for custom SVG
-    tags: ["Design", "Branding"],
-    link: "#" // External link or "#" for no link
+    title: "Paper to Threads n8n",
+    description: "An n8n workflow to convert academic papers into engaging Twitter/X threads, making research more accessible.",
+    type: "automation",
+    gradient: "from-purple-500 to-indigo-600",
+    icon: "🤖",
+    tags: ["n8n", "Automation", "AI", "OpenAI"],
+    link: "https://github.com/yuchengzhang966/paper_to_threads_n8n",
   },
+
   {
     id: 2,
     title: "COVID-19 Dashboard",
@@ -62,7 +63,8 @@ const projects = [
 export default function Projects() {
   // Custom SVG component for the logo
   const LogoSVG = () => (
-    <svg width="200" height="120" viewBox="0 0 200 120" fill="none" className="mx-auto mb-4">
+    <svg width="200" height="120" viewBox="0 0 200 120" fill="none" className="mx-auto mb-4" role="img" aria-labelledby="logoTitle">
+      <title id="logoTitle">Brand Identity Logo</title>
       <path 
         d="M20 60C20 32 32 20 60 20C88 20 100 32 100 60C100 88 88 100 60 100C32 100 20 88 20 60Z" 
         stroke="#4F46E5" 
@@ -91,7 +93,7 @@ export default function Projects() {
   )
 
   // Dashboard component for the analytics project
-  const DashboardPreview = () => (
+/*   const DashboardPreview = () => (
     <div className="max-w-sm mx-auto">
       <div className="flex justify-between items-center mb-6">
         <h3 className="text-xl font-semibold text-gray-900">Summary</h3>
@@ -122,7 +124,7 @@ export default function Projects() {
       </div>
     </div>
   )
-
+ */
   // COVID-19 Map visualization component
   const CovidMapPreview = () => (
     <div className="max-w-sm mx-auto p-4">
@@ -186,7 +188,7 @@ export default function Projects() {
 
   const renderProjectContent = (project: typeof projects[0]) => {
     // Special cases for complex projects
-    if (project.title === "COVID-19 Dashboard") {
+    /* if (project.title === "COVID-19 Dashboard") {
       return (
         <div className="p-8">
           <CovidMapPreview />
@@ -196,9 +198,9 @@ export default function Projects() {
           </div>
         </div>
       )
-    }
+    } */
 
-    if (project.type === "dashboard") {
+/*     if (project.type === "dashboard") {
       return (
         <div className="p-8">
           <DashboardPreview />
@@ -208,7 +210,7 @@ export default function Projects() {
           </div>
         </div>
       )
-    }
+    } */
 
     if (project.icon === "logo") {
       return (
