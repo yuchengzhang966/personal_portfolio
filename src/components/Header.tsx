@@ -6,7 +6,7 @@ import Button from './Button';
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
+/*   useEffect(() => {
     const handleScroll = () => {
       // Add the glass effect when scrolled more than 10px
       setIsScrolled(window.scrollY > 10);
@@ -19,7 +19,7 @@ export default function Header() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []); // Empty dependency array ensures this effect runs only once
+  }, []); // Empty dependency array ensures this effect runs only once */
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -30,7 +30,7 @@ export default function Header() {
   
   return (
     <header 
-      className={`fixed inset-x-0 top-0 md:top-6 md:max-w-5xl md:mx-auto md:rounded-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-lg shadow-md' : 'bg-transparent'}`}
+            className="fixed inset-x-0 top-0 md:top-6 md:max-w-5xl md:mx-auto md:rounded-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-lg shadow-md"
     >
       <nav className="w-full px-8 py-3 flex justify-between items-center">
         <div className="text-black text-xl font-semibold tracking-tight">

@@ -10,7 +10,7 @@ const projects = [
     title: "Paper to Threads n8n",
     description: "An n8n workflow to convert academic papers into engaging Twitter/X threads, making research more accessible.",
     type: "automation",
-    gradient: "from-purple-500 to-indigo-600",
+    gradient: "from-indigo-500 via-purple-500 to-pink-500",
     icon: "🤖",
     tags: ["n8n", "Automation", "AI", "OpenAI"],
     link: "https://github.com/yuchengzhang966/paper_to_threads_n8n",
@@ -21,31 +21,54 @@ const projects = [
     title: "COVID-19 Dashboard",
     description: "Interactive data visualization with D3.js",
     type: "dashboard",
-    gradient: "from-blue-500 to-cyan-600",
+    gradient: "from-cyan-500 to-blue-500",
     icon: "📊",
     tags: ["React", "D3.js", "Vite", "Data Viz"],
     link: "https://covid-vaccine-main.vercel.app" // External link to live site
   },
   {
     id: 3,
-    title: "Weather App",
-    description: "Beautiful weather forecast with maps",
-    type: "web",
-    gradient: "from-sky-400 to-blue-600",
-    icon: "🌤️",
-    tags: ["React", "Weather API", "Next.js"],
-    link: "/projects/weather-app" // Internal Next.js route
+    title: "GoBuddy AI",
+    description: "An AI-powered voice assistant for business travelers, providing seamless airport navigation, real-time transport options, and personalized local guidance.",
+    type: "mobile",
+    gradient: "from-sky-500 to-indigo-500",
+    icon: "✈️",
+    tags: ["AI", "Voice Assistant", "Travel Tech", "Mobile App"],
+    link: "https://gobuddyai.com/",
   },
   {
     id: 4,
-    title: "Mobile App",
-    description: "Cross-platform mobile solution",
-    type: "mobile",
-    gradient: "from-green-500 to-emerald-600",
-    icon: "📱",
-    tags: ["React Native", "Expo"],
-    link: "#"
+    title: "PDF to Branded PowerPoint Converter",
+    description: "A Python tool that converts PDF presentations into professionally branded PowerPoints, using AI to extract content and apply custom templates.",
+    type: "automation",
+    gradient: "from-orange-400 to-rose-400",
+    icon: "🖼️",
+    tags: ["Python", "OpenAI", "AI", "Automation"],
+    link: "https://github.com/yuchengzhang966/ppt",
   },
+  {
+    id: 5,
+    title: "Ethereum Big Data Analysis",
+    description: "An analysis of the Ethereum ecosystem using Hadoop and Spark to find correlations between ETH price, NFT sales, and Twitter activity.",
+    type: "dashboard",
+    gradient: "from-purple-600 via-slate-800 to-indigo-600",
+    icon: "📈",
+    tags: ["Hadoop", "Spark", "Big Data", "Scala"],
+    link: "https://github.com/yuchengzhang966/BigDataEther",
+  },
+  {
+    id: 6,
+    title: "Reversi Game",
+    description: "A multiplayer web-based Reversi game where users can compete, view rankings, and spectate matches. Features user authentication, bot opponents, and game history.",
+    type: "web",
+    gradient: "from-green-400 to-teal-500",
+    icon: "🎮",
+    tags: ["React", "Node.js", "MongoDB", "Redis", "WebSockets"],
+    link: "https://reversi.pro",
+  },
+
+
+
   // 🎯 TO ADD A NEW PROJECT: Just copy this template and modify!
   /*
   {
@@ -99,7 +122,7 @@ const LogoSVG = () => (
 const renderProjectContent = (project: Project) => {
     if (project.icon === "logo") {
       return (
-        <div className="text-center p-6">
+        <div className="relative z-10 text-center p-6">
           <LogoSVG />
           <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
           <p className="text-gray-300 text-sm mb-4">{project.description}</p>
@@ -116,7 +139,7 @@ const renderProjectContent = (project: Project) => {
 
     // Default project card layout
     return (
-      <div className="text-center p-6">
+      <div className="relative z-10 text-center p-6">
         <div className="text-6xl mb-4">{project.icon}</div>
         <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
         <p className="text-gray-200 text-sm mb-4">{project.description}</p>
@@ -151,8 +174,10 @@ export default function Projects() {
             const isInteractive = project.link && project.link !== "#";
             const ProjectCard = (
               <div
-                className={`group bg-gradient-to-br ${project.gradient} rounded-3xl min-h-[400px] flex items-center justify-center transform transition-all duration-300 overflow-hidden ${isInteractive ? 'hover:-translate-y-2 hover:scale-105 cursor-pointer' : ''}`}
+                className={`group relative bg-gradient-to-br ${project.gradient} rounded-3xl min-h-[400px] flex items-center justify-center transform transition-all duration-300 overflow-hidden ${isInteractive ? 'hover:-translate-y-2 hover:scale-105 cursor-pointer' : ''}`}
               >
+                {/* Matte overlay layer */}
+                <div className="absolute inset-0 bg-black/20 transition-colors duration-300 group-hover:bg-black/10"></div>
                 {renderProjectContent(project)}
               </div>
             )

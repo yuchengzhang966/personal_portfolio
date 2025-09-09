@@ -3,10 +3,10 @@ export default function Contact() {
     <section id="contact" className="py-16 md:py-24 bg-gray-900 text-white">
       <div className="max-w-4xl mx-auto px-8 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Let&apos;s Work Together
+          
         </h2>
         <p className="text-lg md:text-xl text-gray-300 mb-8">
-          Ready to bring your next project to life? I&apos;d love to hear from you.
+          
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -30,6 +30,9 @@ export default function Contact() {
           </a>
         </div>
       </div>
+
+ 
+
     </section>
-  )
-} 
+  );
+}

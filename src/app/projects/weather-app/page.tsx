@@ -17,7 +17,7 @@ export default function WeatherAppProject() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
             Back to Portfolio
-          </Link>
+        </Link>
         </div>
       </header>
 
@@ -41,7 +41,7 @@ export default function WeatherAppProject() {
               <h3 className="text-white text-xl font-semibold mb-2">Today</h3>
               <p className="text-white/80 text-3xl font-bold mb-1">24°C</p>
               <p className="text-white/60">Sunny</p>
-            </div>
+        </div>
 
             {/* Tomorrow */}
             <div className="text-center">
@@ -49,7 +49,7 @@ export default function WeatherAppProject() {
               <h3 className="text-white text-xl font-semibold mb-2">Tomorrow</h3>
               <p className="text-white/80 text-3xl font-bold mb-1">22°C</p>
               <p className="text-white/60">Partly Cloudy</p>
-            </div>
+              </div>
 
             {/* Day After */}
             <div className="text-center">
@@ -57,9 +57,9 @@ export default function WeatherAppProject() {
               <h3 className="text-white text-xl font-semibold mb-2">Wednesday</h3>
               <p className="text-white/80 text-3xl font-bold mb-1">18°C</p>
               <p className="text-white/60">Rainy</p>
-            </div>
-          </div>
-        </div>
+                    </div>
+                </div>
+              </div>
 
         {/* Project Details */}
         <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8">
@@ -73,7 +73,7 @@ export default function WeatherAppProject() {
                 <li>• Location search</li>
                 <li>• Responsive design</li>
               </ul>
-            </div>
+                </div>
             <div>
               <h4 className="text-white text-lg font-semibold mb-2">Technologies</h4>
               <div className="flex flex-wrap gap-2">
@@ -83,9 +83,9 @@ export default function WeatherAppProject() {
                 <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
               </div>
             </div>
-          </div>
+        </div>
         </div>
       </main>
     </div>
   )
-} 
+}

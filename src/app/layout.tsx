@@ -5,10 +5,10 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Pearl - Portfolio",
+  title: "Jenny - Welcome to my site",
   description: "Personal portfolio showcasing web development projects and skills. Write code, build products, drive business impacts.",
   keywords: ["portfolio", "web developer", "react", "next.js", "typescript"],
-  authors: [{ name: "Pearl" }],
+  authors: [{ name: "Jenny Zhang" }],
 };
 
 export const viewport: Viewport = {

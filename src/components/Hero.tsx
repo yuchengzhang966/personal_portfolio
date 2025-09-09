@@ -15,8 +15,8 @@ export default function Hero() {
   return (
     <section className="mt-20 py-16 md:py-24 bg-gray-50">
       <div className="max-w-6xl mx-auto px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="order-2 lg:order-1">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-center">
+          <div className="order-2 lg:order-1 lg:col-span-3">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
               <span className="block">Write code</span>
               <span className="block">Build products</span>
@@ -75,7 +75,7 @@ export default function Hero() {
             </a>
           </div>
           
-          <div className="order-1 lg:order-2 flex justify-center">
+          <div className="order-1 lg:order-2 flex justify-center lg:col-span-2">
             <div className="relative">
               <Image
                 src="/images/pic_headshot.png"
