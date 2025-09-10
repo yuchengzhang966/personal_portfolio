@@ -7,7 +7,7 @@ export default function About() {
         </h2>
 
         <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-          I'm a developer who loves bringing ideas to life, guiding projects from the initial concept to the final launch. I'm especially passionate about the potential of AI and enjoy building practical tools that solve real-world problems. This includes creating web scrapers, orchestrating workflows with n8n and LangChain, and developing intelligent Retrieval-Augmented Generation (RAG) applications. For me, it's all about creating smart, useful solutions.
+          I&apos;m a developer who loves bringing ideas to life, guiding projects from the initial concept to the final launch. I&apos;m especially passionate about the potential of AI and enjoy building practical tools that solve real-world problems. This includes creating web scrapers, orchestrating workflows with n8n and LangChain, and developing intelligent Retrieval-Augmented Generation (RAG) applications. For me, it&apos;s all about creating smart, useful solutions.
         </p>
       </div>
     </section>

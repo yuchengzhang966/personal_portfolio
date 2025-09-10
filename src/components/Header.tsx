@@ -1,11 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react';
 import Button from './Button';
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
-
 /*   useEffect(() => {
     const handleScroll = () => {
       // Add the glass effect when scrolled more than 10px
