@@ -66,6 +66,16 @@ const projects = [
     tags: ["React", "Node.js", "MongoDB", "Redis", "WebSockets"],
     link: "https://reversi.pro",
   },
+  {
+    id: 7,
+    title: "SageArk.io",
+    description: "Led the end-to-end development of a comprehensive Learning Management System (LMS) for modern educational needs.",
+    type: "web",
+    gradient: "from-emerald-500 to-teal-600",
+    icon: "🎓",
+    tags: ["LMS", "Full-Stack", "EdTech", "React", "Node.js"],
+    link: "https://sageark.io",
+  },
 
 
 
