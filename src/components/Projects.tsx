@@ -67,6 +67,17 @@ const projects = [
     link: "https://reversi.pro",
   },
 
+  {
+    id: 7,
+    title: "SageArk LMS",
+    description: "Led the end-to-end development of a comprehensive Learning Management System.",
+    type: "web",
+    gradient: "from-blue-600 to-violet-600",
+    icon: "🎓",
+    tags: ["LMS", "Full-Stack", "EdTech", "Project Lead"],
+    link: "https://www.sageark.io",
+  },
+
 
 
   // 🎯 TO ADD A NEW PROJECT: Just copy this template and modify!
