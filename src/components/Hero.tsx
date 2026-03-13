@@ -18,9 +18,8 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-center">
           <div className="order-2 lg:order-1 lg:col-span-3">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
-              <span className="block">Write code</span>
-              <span className="block">Build products</span>
-              <span className="block">Drive business impacts.</span>
+              <span className="block">Build at the intersection</span>
+              <span className="block">of <span className="text-indigo-600">AI</span> and <span className="text-indigo-600">DeFi</span>.</span>
             </h1>
 
             <div className="flex items-center gap-4 mb-8">
