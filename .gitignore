@@ -44,3 +44,4 @@ postcss.config.json
 # Build output
 dist/
 build/
+.env*.local
