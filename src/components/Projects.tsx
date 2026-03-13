@@ -22,7 +22,7 @@ const projects = [
     type: "web",
     gradient: "from-cyan-500 via-teal-600 to-blue-700",
     icon: "⚡",
-    tags: ["React", "Spline 3D", "Framer Motion", "Recharts", "Vite"],
+    tags: ["Market Microstructure", "Institutional Execution", "Order Flow Analysis", "Real-Time Analytics", "DeFi Infrastructure"],
     link: "#hyperluck-modal",
   },
   {
@@ -37,12 +37,12 @@ const projects = [
   },
   {
     id: 1,
-    title: "Paper to Threads n8n",
-    description: "An n8n workflow to convert academic papers into engaging Twitter/X threads, making research more accessible.",
+    title: "AI Paper Twitter Agent",
+    description: "AI agent that monitors cutting-edge AI research and autonomously distills papers into viral Twitter threads.",
     type: "automation",
     gradient: "from-fuchsia-500 via-purple-600 to-indigo-600",
     icon: "🤖",
-    tags: ["n8n", "Automation", "AI", "OpenAI"],
+    tags: ["AI Agents", "n8n", "Automation", "OpenAI", "Research Synthesis"],
     link: "https://github.com/yuchengzhang966/paper_to_threads_n8n",
   },
 
@@ -68,12 +68,12 @@ const projects = [
   },
   {
     id: 4,
-    title: "PDF to Branded PowerPoint Converter",
-    description: "A Python tool that converts PDF presentations into professionally branded PowerPoints, using AI to extract content and apply custom templates.",
+    title: "AI-Enabled PowerPoint Builder",
+    description: "AI agent that transforms raw content into professionally branded presentations — extracts, structures, and designs slides end-to-end.",
     type: "automation",
     gradient: "from-rose-400 via-pink-500 to-orange-400",
     icon: "🖼️",
-    tags: ["Python", "OpenAI", "AI", "Automation"],
+    tags: ["AI Agents", "Python", "OpenAI", "Automation", "Content Generation"],
     link: "https://github.com/yuchengzhang966/ppt",
   },
   {
@@ -85,16 +85,6 @@ const projects = [
     icon: "📈",
     tags: ["Hadoop", "Spark", "Big Data", "Scala"],
     link: "https://github.com/yuchengzhang966/BigDataEther",
-  },
-  {
-    id: 6,
-    title: "Reversi Game",
-    description: "A multiplayer web-based Reversi game where users can compete, view rankings, and spectate matches. Features user authentication, bot opponents, and game history.",
-    type: "web",
-    gradient: "from-emerald-400 via-green-500 to-teal-500",
-    icon: "🎮",
-    tags: ["React", "Node.js", "MongoDB", "Redis", "WebSockets"],
-    link: "https://reversi.pro",
   },
   {
     id: 7,
