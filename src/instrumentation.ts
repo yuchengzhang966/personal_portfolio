@@ -3,7 +3,7 @@ export async function register() {
   // Replace it with a no-op shim on the server side.
   if (typeof window === 'undefined' && typeof globalThis.localStorage !== 'undefined') {
     const noop = () => {};
-    (globalThis as any).localStorage = {
+    (globalThis as unknown as Record<string, unknown>).localStorage = {
       getItem: noop,
       setItem: noop,
       removeItem: noop,
