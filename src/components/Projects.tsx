@@ -10,7 +10,7 @@ const projects = [
     title: "VAEB – ETHDenver 2026 Winner",
     description: "ZK-proof system enabling AI agents to execute blockchain transactions without ever touching private keys.",
     type: "web",
-    gradient: "from-violet-600 via-purple-700 to-fuchsia-600",
+    gradient: "linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%)",
     icon: "🏆",
     tags: ["ZK Proofs", "Solidity", "Circom", "MCP", "DAML"],
     link: "#vaeb-modal",
@@ -20,7 +20,7 @@ const projects = [
     title: "HyperLuck OS",
     description: "Institutional-grade execution OS with 3D visualizations and real-time dashboards for professional trading.",
     type: "web",
-    gradient: "from-cyan-500 via-teal-600 to-blue-700",
+    gradient: "linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)",
     icon: "⚡",
     tags: ["Market Microstructure", "Institutional Execution", "Order Flow Analysis", "Real-Time Analytics", "DeFi Infrastructure"],
     link: "#hyperluck-modal",
@@ -30,7 +30,7 @@ const projects = [
     title: "Funding Rate Efficient Frontier",
     description: "Academic paper on funding-rate vault capacity limits — submitted to D² 2026 at Columbia Business School.",
     type: "dashboard",
-    gradient: "from-yellow-400 via-orange-500 to-red-500",
+    gradient: "linear-gradient(120deg, #f6d365 0%, #fda085 100%)",
     icon: "📄",
     tags: ["Python", "DeFi Research", "Monte Carlo", "Hyperliquid", "Aave"],
     link: "#funding-modal",
@@ -40,7 +40,7 @@ const projects = [
     title: "AI Paper Twitter Agent",
     description: "AI agent that monitors cutting-edge AI research and autonomously distills papers into viral Twitter threads.",
     type: "automation",
-    gradient: "from-fuchsia-500 via-purple-600 to-indigo-600",
+    gradient: "linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%)",
     icon: "🤖",
     tags: ["AI Agents", "n8n", "Automation", "OpenAI", "Research Synthesis"],
     link: "https://github.com/yuchengzhang966/paper_to_threads_n8n",
@@ -51,7 +51,7 @@ const projects = [
     title: "COVID-19 Dashboard",
     description: "Interactive data visualization with D3.js",
     type: "dashboard",
-    gradient: "from-blue-400 via-cyan-400 to-teal-400",
+    gradient: "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)",
     icon: "📊",
     tags: ["React", "D3.js", "Vite", "Data Viz"],
     link: "https://covid-vaccine-main.vercel.app"
@@ -61,7 +61,7 @@ const projects = [
     title: "GoBuddy AI",
     description: "AI agent demo for business travelers — RAG-powered policy Q&A, intent parsing, and personalized booking.",
     type: "mobile",
-    gradient: "from-sky-400 via-blue-500 to-indigo-500",
+    gradient: "linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)",
     icon: "✈️",
     tags: ["AI", "Voice Assistant", "Travel Tech", "Mobile App"],
     link: "#gobuddy-modal",
@@ -71,7 +71,7 @@ const projects = [
     title: "AI-Enabled PowerPoint Builder",
     description: "AI agent that transforms raw content into professionally branded presentations — extracts, structures, and designs slides end-to-end.",
     type: "automation",
-    gradient: "from-rose-400 via-pink-500 to-orange-400",
+    gradient: "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
     icon: "🖼️",
     tags: ["AI Agents", "Python", "OpenAI", "Automation", "Content Generation"],
     link: "https://github.com/yuchengzhang966/ppt",
@@ -81,7 +81,7 @@ const projects = [
     title: "Ethereum Big Data Analysis",
     description: "An analysis of the Ethereum ecosystem using Hadoop and Spark to find correlations between ETH price, NFT sales, and Twitter activity.",
     type: "dashboard",
-    gradient: "from-violet-600 via-purple-600 to-indigo-600",
+    gradient: "linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)",
     icon: "📈",
     tags: ["Hadoop", "Spark", "Big Data", "Scala"],
     link: "https://github.com/yuchengzhang966/BigDataEther",
@@ -91,7 +91,7 @@ const projects = [
     title: "SageArk.io",
     description: "Led the end-to-end development of a comprehensive Learning Management System (LMS) for modern educational needs.",
     type: "web",
-    gradient: "from-teal-400 via-emerald-500 to-green-600",
+    gradient: "linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%)",
     icon: "🎓",
     tags: ["LMS", "Full-Stack", "EdTech", "React", "Node.js"],
     link: "https://sageark.io",
@@ -567,10 +567,11 @@ export default function Projects() {
             const isInteractive = project.link && project.link !== "#";
             const ProjectCard = (
               <div
-                className={`group relative bg-gradient-to-br ${project.gradient} rounded-3xl min-h-[400px] flex items-center justify-center transform transition-all duration-300 overflow-hidden ${isInteractive ? 'hover:-translate-y-2 hover:scale-105 cursor-pointer' : ''}`}
+                className={`group relative rounded-3xl min-h-[400px] flex items-center justify-center transform transition-all duration-300 overflow-hidden ${isInteractive ? 'hover:-translate-y-2 hover:scale-105 cursor-pointer' : ''}`}
+                style={{ backgroundImage: project.gradient }}
               >
                 {/* Matte overlay layer */}
-                <div className="absolute inset-0 bg-black/20 transition-colors duration-300 group-hover:bg-black/10"></div>
+                <div className="absolute inset-0 bg-black/30 transition-colors duration-300 group-hover:bg-black/20"></div>
                 {renderProjectContent(project)}
               </div>
             )
